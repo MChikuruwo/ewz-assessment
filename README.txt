@@ -50,4 +50,12 @@ curl -X 'GET' \
   
   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   
-  END
+ To test application;
+
+ -Clone project from github and download all the dependencies needed.
+ - Run application in your IDE
+ - go to "http://localhost:8201/swagger-ui.html" for swagger API documentation.
+ - if you choose docker, run the docker file and once it's running, do step 4.
+
+ >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
