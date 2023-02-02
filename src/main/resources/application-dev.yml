@@ -1,0 +1,63 @@
+info:
+  app:
+    name: Location-service
+    version: '1.0'
+    description: API for location management service for EWZ assessment.
+
+
+spring:
+  main:
+    allow-bean-definition-overriding: 'true'
+  #    web-application-type: reactive
+
+
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+      max_allowed_packet: '2000'
+    show-sql: 'true'
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password:
+    username: root
+    url: jdbc:mysql://localhost:3306/location_service?createDatabaseIfNotExist=true&useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&failOverReadOnly=false&allowMultiQueries=true&serverTimezone=Africa/Harare
+
+  application:
+    name: Location-service
+
+logging:
+  level:
+    org:
+      hibernate: ERROR
+      springframework:
+        web: INFO
+    guru:
+      springframework:
+        controllers: DEBUG
+  file:
+    name: logs/payroll-service.log
+server:
+  port: '8201'
+  ssl:
+    enabled: 'false'
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+

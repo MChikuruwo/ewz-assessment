@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: location-service
+  profiles:
+    active: dev
+
+app-name: "location-service"
+
+product:
+  name: EWZ
+
+server:
+  port: 8201
+
